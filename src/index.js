@@ -68,7 +68,3 @@ program
   });
 
 program.parse(process.argv);
-
-module.exports = () => {
-  console.log(package.version);
-};
