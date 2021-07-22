@@ -11,7 +11,7 @@ const { readFile, saveFile } = require('./file')
 program.version(package.version);
 
 program
-  .command('create-cig-service [service]')
+  .command('create-cig-service')
   .description('Create a service')
   .action((service) => {
     console.log(chalk.green('Creating service: ', service));
