@@ -11,8 +11,8 @@ const { readFile, saveFile } = require('./file')
 program.version(package.version);
 
 program
-  .command('create-cig-service [service]')
-  .description('Create a service')
+  .command('default [service]')
+  .description('Create a service using the default template')
   .action((service) => {
     console.log(chalk.green('Creating service: ', service));
     console.log(chalk.green('Cloning template...'));
