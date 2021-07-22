@@ -1,6 +1,6 @@
 {
-  "name": "create-cig-service",
-  "version": "1.0.0",
+  "name": "@cig-platform/create-service",
+  "version": "1.0.1",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -13,5 +13,8 @@
     "commander": "^8.0.0",
     "shelljs": "^0.8.4",
     "yaml": "^1.10.2"
+  },
+  "bin": {
+    "create-cig-service": "./src/index.js"
   }
 }

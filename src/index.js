@@ -1,4 +1,4 @@
-const program = require('commander');
+const { program } = require('commander');
 const chalk = require('chalk');
 const shell = require('shelljs');
 const { join } = require('path');
@@ -11,7 +11,7 @@ const { readFile, saveFile } = require('./file')
 program.version(package.version);
 
 program
-  .command('create-cig-service')
+  .command('create-cig-service [service]')
   .description('Create a service')
   .action((service) => {
     console.log(chalk.green('Creating service: ', service));
@@ -68,3 +68,7 @@ program
   });
 
 program.parse(process.argv);
+
+module.exports = () => {
+  console.log(package.version);
+};
