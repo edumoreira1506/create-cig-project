@@ -2,7 +2,7 @@
 
 # Installation
 
-`npm i @cig-platform/create-service -g`
+`npm i @cig-platform/create-project -g`
 
 # Usage
 
