@@ -2,9 +2,8 @@
 
 # Installation
 
-`npm i @cig-platform/create-service -g`
-
+`npm i @cig-platform/create-project -g`
 
 # Usage
 
-`create-cig-service default project-name`
+`create-cig-project default project-name`
