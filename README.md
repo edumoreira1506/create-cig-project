@@ -4,7 +4,6 @@
 
 `npm i @cig-platform/create-service -g`
 
-
 # Usage
 
-`create-cig-service default project-name`
+`create-cig-project default project-name`

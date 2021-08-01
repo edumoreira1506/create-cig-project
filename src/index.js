@@ -11,7 +11,7 @@ const { readFile, saveFile } = require('./file')
 program.version(package.version);
 
 program
-  .command('default [service]')
+  .command('service [service]')
   .description('Create a service using the default template')
   .action((service) => {
     console.log(chalk.green('Creating service: ', service));

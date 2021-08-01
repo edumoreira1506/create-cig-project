@@ -16,6 +16,6 @@
     "yaml": "^1.10.2"
   },
   "bin": {
-    "create-cig-service": "bin/create-cig-service"
+    "create-cig-project": "bin/create-cig-project"
   }
 }
