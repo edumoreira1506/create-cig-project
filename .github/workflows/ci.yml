@@ -17,6 +17,9 @@ jobs:
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Installing dependencies
+        run: |
+          npm i
       - name: Running tests
         run: |
           npm run test
@@ -34,6 +37,9 @@ jobs:
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Installing dependencies
+        run: |
+          npm i
       - name: Linter
         run: |
           npm run lint
