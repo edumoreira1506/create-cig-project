@@ -6,7 +6,7 @@ const { join } = require('path');
 const package = require('../package.json');
 
 const { readJson, saveJson } = require('./json');
-const { readFile, saveFile } = require('./file')
+const { readFile, saveFile } = require('./file');
 
 program.version(package.version);
 
@@ -28,7 +28,7 @@ program
       repository: {},
       bugs: {},
       homepage: ''
-    }
+    };
 
     console.log(chalk.green('Repository cloned!'));
     console.log(chalk.green('Editing package.json...'));
@@ -43,27 +43,27 @@ program
 
     shell.exec('npm install');
 
-    console.log(chalk.green('Dependencies installed!'))
-    console.log(chalk.green('Editing README...'))
+    console.log(chalk.green('Dependencies installed!'));
+    console.log(chalk.green('Editing README...'));
 
-    const readMeString = readFile('README.md')
+    const readMeString = readFile('README.md');
     const newReadMeString = readMeString.replace(/cig-service-template/g, service);
 
     shell.rm('README.md');
 
-    saveFile('README.md', newReadMeString)
+    saveFile('README.md', newReadMeString);
 
-    console.log(chalk.green('README edited!'))
-    console.log(chalk.green('Editing staging.yml...'))
+    console.log(chalk.green('README edited!'));
+    console.log(chalk.green('Editing staging.yml...'));
 
-    const ymlString = readFile('.github/workflows/staging.yml')
+    const ymlString = readFile('.github/workflows/staging.yml');
     const newYmlString = ymlString.replace(/cig-service-template/g, service);
 
     shell.rm('.github/workflows/staging.yml');
 
-    saveFile('.github/workflows/staging.yml', newYmlString)
+    saveFile('.github/workflows/staging.yml', newYmlString);
 
-    console.log(chalk.green('staging.yml edited!'))
+    console.log(chalk.green('staging.yml edited!'));
     console.log(chalk.green(`${service} created! Run cd ${service}`));
   });
 

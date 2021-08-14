@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 
 const saveJson = (path, data) => fs.writeFileSync(path, JSON.stringify(data, null, '\t'));
 
@@ -15,4 +15,4 @@ const readJson = (path) => {
 module.exports = {
   saveJson,
   readJson
-}
+};
