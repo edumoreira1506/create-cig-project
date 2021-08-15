@@ -54,16 +54,6 @@ program
     saveFile('README.md', readMeString);
 
     console.log(chalk.green('README edited!'));
-    console.log(chalk.green('Editing staging.yml...'));
-
-    const ymlString = readFile('.github/workflows/staging.yml');
-    const newYmlString = ymlString.replace(/cig-library-template/g, libraryName);
-
-    shell.rm('.github/workflows/staging.yml');
-
-    saveFile('.github/workflows/staging.yml', newYmlString);
-
-    console.log(chalk.green('staging.yml edited!'));
     console.log(chalk.green(`${libraryName} created! Run cd ${libraryName}`));
   });
 
