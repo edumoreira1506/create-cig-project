@@ -32,6 +32,7 @@ program
     const newYmlString = ymlString.replace(/cig-service-template/g, service);
 
     shell.rm('.github/workflows/staging.yml');
+    shell.rm('-rf', '.git');
 
     saveFile('.github/workflows/staging.yml', newYmlString);
 
@@ -51,6 +52,8 @@ program
     const readMeString = `## ${libraryName}`;
 
     shell.rm('README.md');
+    shell.rm('-rf', '.git');
+
     saveFile('README.md', readMeString);
 
     console.log(chalk.green('README edited!'));
