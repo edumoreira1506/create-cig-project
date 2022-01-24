@@ -60,4 +60,24 @@ program
     console.log(chalk.green(`${libraryName} created! Run cd ${libraryName}`));
   });
 
+program
+  .command('microfrontend [library]')
+  .description('Create a microfrontend using the default template')
+  .action((microFrontendName) => {
+    console.log(chalk.green('Creating microfrontend: ', microFrontendName));
+    console.log(chalk.green('Cloning template...'));
+
+    clone('git@github.com:edumoreira1506/cig-microfrontend-template.git', microFrontendName);
+
+    const readMeString = `## ${microFrontendName}`;
+
+    shell.rm('README.md');
+    shell.rm('-rf', '.git');
+
+    saveFile('README.md', readMeString);
+
+    console.log(chalk.green('README edited!'));
+    console.log(chalk.green(`${microFrontendName} created! Run cd ${microFrontendName}`));
+  });
+
 program.parse(process.argv);
